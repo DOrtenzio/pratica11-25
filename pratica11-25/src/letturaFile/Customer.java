@@ -40,4 +40,21 @@ public class Customer {
     public void setDataSub(String dataSub) { this.dataSub = dataSub; }
     public String getWebsite() { return website; }
     public void setWebsite(String website) { this.website = website; }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "index=" + index +
+                ", cId='" + cId + '\'' +
+                ", nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                ", company='" + company + '\'' +
+                ", citta='" + citta + '\'' +
+                ", phone1='" + phone1 + '\'' +
+                ", phone2='" + phone2 + '\'' +
+                ", email='" + email + '\'' +
+                ", dataSub='" + dataSub + '\'' +
+                ", website='" + website + '\'' +
+                '}';
+    }
 }
