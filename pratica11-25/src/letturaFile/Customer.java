@@ -44,19 +44,6 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "index=" + index +
-                ", cId='" + cId + '\'' +
-                ", nome='" + nome + '\'' +
-                ", cognome='" + cognome + '\'' +
-                ", company='" + company + '\'' +
-                ", citta='" + citta + '\'' +
-                ", stato='" + stato + '\'' +
-                ", phone1='" + phone1 + '\'' +
-                ", phone2='" + phone2 + '\'' +
-                ", email='" + email + '\'' +
-                ", dataSub='" + dataSub + '\'' +
-                ", website='" + website + '\'' +
-                '}';
+        return "Customer{" + "index=" + index + ", stato='" + stato + '\'' + "}";
     }
 }

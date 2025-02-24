@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             FileReader reader=new FileReader("src/letturaFile/customers-100.csv");
-            DanishCustomer danishCustomer=new DanishCustomer();
+            ListCustomer listCustomer=new ListCustomer();
             int next;
             //LETTURA
             String record="";
@@ -18,14 +18,14 @@ public class Main {
                 }else{
                     String [] campiRecord=record.split(",");
                     if(campiRecord[6].trim().equalsIgnoreCase("Solomon Islands")){
-                        danishCustomer.add(new Customer(Integer.parseInt(campiRecord[0]),campiRecord[1],campiRecord[2],campiRecord[3],campiRecord[4],campiRecord[5],campiRecord[6],campiRecord[7],campiRecord[8],campiRecord[9],campiRecord[10],campiRecord[11]));
+                        listCustomer.add(new Customer(Integer.parseInt(campiRecord[0]),campiRecord[1],campiRecord[2],campiRecord[3],campiRecord[4],campiRecord[5],campiRecord[6],campiRecord[7],campiRecord[8],campiRecord[9],campiRecord[10],campiRecord[11]));
                         System.out.println("Aggiunto utente con id: "+Integer.parseInt(campiRecord[0]));
                     }
                     record="";
                 }
             }
             //STAMPA
-            System.out.println(danishCustomer.toString());
+            System.out.println(listCustomer);
             reader.close();
         } catch (FileNotFoundException e) {
             System.err.println(e.getMessage());
