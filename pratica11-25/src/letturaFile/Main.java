@@ -24,6 +24,7 @@ public class Main {
                     record="";
                 }
             }
+            reader.close();
             //STAMPA
             System.out.println(danishCustomer);
         } catch (FileNotFoundException e) {
