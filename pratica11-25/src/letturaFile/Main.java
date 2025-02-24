@@ -12,21 +12,21 @@ public class Main {
             int next;
             //LETTURA
             String record="";
-            while((next= reader.read())!=-1){
-                if(next!=10)
-                    record=record+((char)next);
-                else{
+            while((next=reader.read())!=-1) {
+                if (next != 10){
+                    record = record + ((char) next);
+                }else{
                     String [] campiRecord=record.split(",");
-                    if(campiRecord[6].equalsIgnoreCase("Denmark")){
-                        danishCustomer.add(new Customer(Integer.parseInt(campiRecord[0]),campiRecord[1],campiRecord[2],campiRecord[3],campiRecord[4],campiRecord[5],campiRecord[6],campiRecord[7],campiRecord[8],campiRecord[9],campiRecord[10]));
+                    if(campiRecord[6].trim().equalsIgnoreCase("Solomon Islands")){
+                        danishCustomer.add(new Customer(Integer.parseInt(campiRecord[0]),campiRecord[1],campiRecord[2],campiRecord[3],campiRecord[4],campiRecord[5],campiRecord[6],campiRecord[7],campiRecord[8],campiRecord[9],campiRecord[10],campiRecord[11]));
                         System.out.println("Aggiunto utente con id: "+Integer.parseInt(campiRecord[0]));
                     }
                     record="";
                 }
             }
-            reader.close();
             //STAMPA
-            System.out.println(danishCustomer);
+            System.out.println(danishCustomer.toString());
+            reader.close();
         } catch (FileNotFoundException e) {
             System.err.println(e.getMessage());
         } catch (IOException e) {

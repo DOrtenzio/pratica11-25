@@ -9,14 +9,18 @@ public class DanishCustomer {
         this.lista = new ArrayList<Customer>();
     }
 
-    public void add(Customer customer){ this.lista.add(customer); }
+    public void add(Customer customer){
+        System.out.println("AGGUNTO");
+        this.lista.add(customer);
+    }
     public boolean remove(Customer customer){ return this.lista.remove(customer); }
     public Customer searchIndex(int index){ return this.lista.get(index); }
 
     @Override
     public String toString() {
-        return "DanishCustomer{" +
-                "lista=" + lista +
-                '}';
+        String s="Customer: \n";
+        for (Customer customer: lista)
+            s=s+customer.toString();
+        return s;
     }
 }

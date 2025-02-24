@@ -2,15 +2,16 @@ package letturaFile;
 
 public class Customer {
     private int index;
-    private String cId,nome,cognome,company,citta,phone1,phone2,email,dataSub,website;
+    private String cId,nome,cognome,company,citta,stato,phone1,phone2,email,dataSub,website;
 
-    public Customer(int index, String cId, String nome, String cognome, String company, String citta, String phone1, String phone2, String email, String dataSub, String website) {
+    public Customer(int index, String cId, String nome, String cognome, String company, String citta,String stato, String phone1, String phone2, String email, String dataSub, String website) {
         this.index = index;
         this.cId = cId;
         this.nome = nome;
         this.cognome = cognome;
         this.company = company;
         this.citta = citta;
+        this.stato=stato;
         this.phone1 = phone1;
         this.phone2 = phone2;
         this.email = email;
@@ -50,6 +51,7 @@ public class Customer {
                 ", cognome='" + cognome + '\'' +
                 ", company='" + company + '\'' +
                 ", citta='" + citta + '\'' +
+                ", stato='" + stato + '\'' +
                 ", phone1='" + phone1 + '\'' +
                 ", phone2='" + phone2 + '\'' +
                 ", email='" + email + '\'' +
